@@ -1,0 +1,77 @@
+
+<!--<!DOCTYPE hibernate-configuration PUBLIC-->
+<!--        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"-->
+<!--        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">-->
+
+<!--<hibernate-configuration>-->
+<!--    <session-factory>-->
+
+<!--&lt;!&ndash;        <property name="connection.url">jdbc:postgresql://localhost:5432/postgres</property> &lt;!&ndash; BD Mane &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="connection.driver_class">org.postgresql.Driver</property> &lt;!&ndash; DB Driver &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="connection.username">postgres</property> &lt;!&ndash; DB User &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="connection.password">2003</property> &lt;!&ndash; DB Password &ndash;&gt;&ndash;&gt;-->
+<!--        -->
+<!--        <property name="hbm2ddl.auto">create-drop</property> &lt;!&ndash; create / create-drop / update &ndash;&gt;-->
+
+<!--&lt;!&ndash;        <property name="properties.hibernate.validator.apply_to_ddl=false"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="hibernate.validator.apply_to_ddl=false"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="hibernate.validator.autoregister_listeners=false"/>&ndash;&gt;-->
+
+<!--        <property name="show_sql">true</property> &lt;!&ndash; Show SQL in console &ndash;&gt;-->
+<!--        <property name="format_sql">true</property> &lt;!&ndash; Show SQL formatted &ndash;&gt;-->
+
+<!--        <mapping class="pet.entity.Client"></mapping>-->
+<!--        <mapping class="pet.entity.Machine"></mapping>-->
+<!--        <mapping class="pet.entity.Orders"></mapping>-->
+<!--        <mapping class="pet.entity.OrderType"></mapping>-->
+<!--        <mapping class="pet.entity.Quality"></mapping>-->
+<!--        <mapping class="pet.entity.QualityType"></mapping>-->
+<!--        <mapping class="pet.entity.DailyProduction"></mapping>-->
+
+<!--    </session-factory>-->
+
+<!--</hibernate-configuration>-->
+
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Database connection settings -->
+        <property name="connection.driver_class">org.h2.Driver</property>
+
+<!--        <property name="connection.url">jdbc:h2:D:\JAVA\Output\Baza</property>-->
+
+        <property name="connection.username">admin</property>
+        <property name="connection.password">admin</property>
+        <!-- JDBC connection pool settings ... using built-in test pool -->
+        <property name="connection.pool_size">100</property>
+        <!-- Select our SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.H2Dialect</property>
+        <!-- Echo the SQL to stdout -->
+        <property name="show_sql">true</property>
+        <!-- Set the current session context -->
+        <property name="current_session_context_class">thread</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">create</property>
+
+
+        <!-- dbcp connection pool configuration -->
+        <property name="hibernate.dbcp.initialSize">500</property>
+        <property name="hibernate.dbcp.maxTotal">2000</property>
+        <property name="hibernate.dbcp.maxIdle">1000</property>
+        <property name="hibernate.dbcp.minIdle">500</property>
+        <property name="hibernate.dbcp.maxWaitMillis">-1</property>
+
+        <mapping class="pet.entity.Client"></mapping>
+        <mapping class="pet.entity.Machine"></mapping>
+        <mapping class="pet.entity.Orders"></mapping>
+        <mapping class="pet.entity.OrderType"></mapping>
+        <mapping class="pet.entity.Quality"></mapping>
+        <mapping class="pet.entity.QualityType"></mapping>
+        <mapping class="pet.entity.DailyProduction"></mapping>
+
+    </session-factory>
+</hibernate-configuration>

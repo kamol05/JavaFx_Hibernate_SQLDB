@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pet.controller.MachineMenu">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="500.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_RIGHT" layoutX="377.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="123.0" spacing="30.0">
+               <children>
+                  <Button fx:id="add" mnemonicParsing="false" onAction="#createMachine" prefHeight="40.0" prefWidth="69.0" text="yangi">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="edit" mnemonicParsing="false" onAction="#editMachine" prefHeight="40.0" prefWidth="69.0" text="uzgarti">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="back" maxWidth="-Infinity" mnemonicParsing="false" onAction="#setBack" prefHeight="40.0" prefWidth="69.0" text="orqaga">
+                     <VBox.margin>
+                        <Insets top="100.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            <TableView fx:id="tableView" layoutX="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="382.0">
+              <columns>
+                  <TableColumn fx:id="number" prefWidth="60.0" text="Nomeri" />
+                  <TableColumn fx:id="width" text="Eni" />
+                  <TableColumn fx:id="dentities" prefWidth="85.0" text="Atqi" />
+                  <TableColumn fx:id="speed" text="Tezligi" />
+              </columns>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

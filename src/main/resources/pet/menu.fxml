@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pet.Menu">
+   <children>
+      <AnchorPane fx:id="anchorman" />
+      <MenuBar prefHeight="50.0" prefWidth="800.0"> 
+        <menus>
+          <Menu fx:id="Malumotlar" mnemonicParsing="false" text="Malumotlar">
+            <items>
+                  <MenuItem fx:id="CLients" mnemonicParsing="false" onAction="#openClientsMenu" text="Klentlar" />
+                  <MenuItem fx:id="Machines" mnemonicParsing="false" onAction="#openMachineMenu" text="Stanoklar" />
+                  <MenuItem fx:id="OrdersTypes" mnemonicParsing="false" onAction="#openOrderTypeMenu" text="Buyurtma Turi" />
+                  <MenuItem fx:id="Qualitys" mnemonicParsing="false" onAction="#openQualityMenu" text="Sifat" />
+                  <MenuItem fx:id="QualityTypes" mnemonicParsing="false" onAction="#openQualityTypeMenu" text="Sifat Turi" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ma'lumotlar Kiritish">
+            <items>
+              <MenuItem fx:id="DailyProduction" onAction="#openDailyProductionMenu" mnemonicParsing="false" text="Ishlab Chiqarish" />
+                <MenuItem fx:id="Zakazlar" mnemonicParsing="false" onAction="#openOrdersMenu" text="Buyurtmalar" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </MenuBar>
+   </children>
+</VBox>
