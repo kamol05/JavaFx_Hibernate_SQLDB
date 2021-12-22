@@ -1,7 +1,7 @@
 # JavaFx_Hibernate_SQLDB
 Hi..!
 
-This is my first pet project created after the JAVARUSH online course
+This is my first pet project created after the https://javarush.ru/ online course
 
 Project is ready for compiling and use as executable .JAR
 
