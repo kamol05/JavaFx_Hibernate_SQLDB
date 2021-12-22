@@ -15,7 +15,12 @@ Lombok:
 
 javafx-maven-plugin: for executable .JAR
 
-maven-shade-plugin:  for packing externals libs into .JAR and 
+maven-shade-plugin:  for packing externals libs into .JAR and excluding META-INF files from signatured libs.
+
+![1](src/main/resources/1.png)
+![1](src/main/resources/2.png)
+![1](src/main/resources/3.png)
+
 
 
 
