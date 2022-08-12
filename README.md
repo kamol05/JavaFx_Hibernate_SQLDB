@@ -1,8 +1,6 @@
 # JavaFx_Hibernate_SQLDB
 Hi..!
 
-This is my first pet project created after the https://javarush.ru/ online course
-
 Project is ready for compiling and use as executable .JAR
 
 Now App uses H2 database file from root folder where executed, App can work with PostgresSQL,MSSQL;
